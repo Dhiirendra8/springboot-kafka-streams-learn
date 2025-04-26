@@ -1,0 +1,34 @@
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        singleInputOutput-in-0:
+          destination: input-topic-1
+        singleInputOutput-out-0:
+          destination: output-topic-1
+        multipleOutputBranching-in-0:
+          destination: input-topic-2
+        multipleOutputBranching-out-0:
+          destination: output-topic-2-a
+        multipleOutputBranching-out-1:
+          destination: output-topic-2-b
+        twoInputSingleOutput-in-0:
+          destination: input-topic-3-a
+        twoInputSingleOutput-in-1:
+          destination: input-topic-3-b
+        twoInputSingleOutput-out-0:
+          destination: output-topic-3
+        twoInputNoOutput-in-0:
+          destination: input-topic-4-a
+        twoInputNoOutput-in-1:
+          destination: input-topic-4-b
+        multipleInputs-in-0:
+          destination: input-topic-5-a
+        multipleInputs-in-1:
+          destination: input-topic-5-b
+        multipleInputs-in-2:
+          destination: input-topic-5-c
