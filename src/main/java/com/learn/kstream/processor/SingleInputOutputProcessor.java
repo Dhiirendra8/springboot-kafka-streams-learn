@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.function.Function;
 
-@Component
+//@Component
 public class SingleInputOutputProcessor {
     @Bean
     public Function<KStream<String, String>, KStream<String, WordCount>> singleInputOutput() {

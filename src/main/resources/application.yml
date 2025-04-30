@@ -1,8 +1,12 @@
+logging:
+  level:
+    org.apache.kafka.streams: ERROR
+
 spring:
   kafka:
     bootstrap-servers: localhost:9092
     streams:
-      application-id: my-topology-stream-app
+      application-id: my-dedupe-stream-app
       consumer:
         auto-offset-reset: earliest
   cloud:
@@ -21,10 +25,10 @@ spring:
           destination: input-topic-1
         singleInputOutput-out-0:
           destination: output-topic-1
-        process-in-0:
-          destination: processor-input
-        process-out-0:
-          destination: processor-output
+#        process-in-0:
+#          destination: processor-input
+#        process-out-0:
+#          destination: processor-output
 #        multipleOutputBranching-in-0:
 #          destination: input-topic-2
 #        multipleOutputBranching-out-0:
